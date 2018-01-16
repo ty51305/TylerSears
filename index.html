@@ -49,16 +49,4 @@ body {
  <button class="btn btn-success" onclick=" window.open('https://instagrm.com/ty51305/','_blank')"> Instagram</button>
    <button class="btn btn-success" onclick=" window.open('https://twitter.com/ty51305/','_blank')"> Twitter</button>
 
-  var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
  
-p.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.src = window.URL.createObjectURL(mediaStream);
-  video.onloadedmetadata = function(e) {
-// Do something with the video here.
-    video.play();
- 
-  };
-});
- 
-p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.
